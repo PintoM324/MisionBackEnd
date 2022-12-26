@@ -1,0 +1,143 @@
+html, body{
+    background-color: rgb(71, 67, 67);
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: #fff;
+    font-weight: bold;
+    font-size: xx-large;
+}
+button{
+    font-size:100%;
+    font-family:sans-serif;
+    width:20%;
+    height:5%;
+    border-width:0.5%;
+    color:#fff;
+    border-color:rgb(158, 158, 158);
+    font-weight:bold;
+    border-top-left-radius:42px;
+    border-top-right-radius:42px;
+    border-bottom-left-radius:42px;
+    border-bottom-right-radius:42px;
+    background:#303534;
+}
+
+.tecla.Larga{
+    width:50%;
+}
+.tecla.signo.C{
+    color: rgb(255, 72, 0);
+    width:50%;
+}
+
+.tecla.Igual{
+    background:#038a27;
+    border-color:#03651d;
+}
+
+.tecla.Signo{
+    color: #02ba33;
+}
+
+.tecla.Signo.A{
+    font-size: 90%;
+}
+
+.divFilaTeclas{
+    flex: 0.2 0.2 auto;
+    display: flex;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    flex-direction: row;
+    height: 17.5%;
+    justify-content: space-between;
+}
+#contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    height: 100%;
+}
+
+#divOperacion{
+    height: 100%;
+    width: 60%;
+    border-top-left-radius:4px;
+    border-bottom-left-radius:4px;
+}
+#divResultado{
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: end;
+    z-index: 100;
+    border-style: solid;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+}
+
+#divTeclas{
+
+}
+
+#divCalculadora{
+    background-color: rgb(12, 14, 10);
+    display: flex;
+    flex-direction: row;
+    top: 25%;
+    left: 40%;
+    height: 95%;
+    width: 40%;
+    justify-content: space-between;
+    border-top-left-radius:4px;
+    border-top-right-radius:4px;
+    border-bottom-left-radius:4px;
+    border-bottom-right-radius:4px;
+    box-shadow: 10px 10px 50px -7px rgba(4, 88, 4, 1);
+    background: black;
+    overflow: hidden;
+    animation: resplandor 3s linear infinite;
+}
+
+#divCalculadora::after{
+    background: inherit;
+    top: 0;
+    box-shadow: inset 0 0 0 200px, rgba(255, 255, 255,0.05);
+    filter: blur(20px);
+}
+
+@keyframes resplandor {
+    from{
+        box-shadow: none;
+    }
+    50%{
+        box-shadow: 0px 0px 39px 16px rgba(0,158, 255,0.75);
+        -webkit-box-shadow: 0px 0px 39px 16px rgba(0,158, 255,0.75);
+        -moz-box-shadow: 0px 0px 39px 16px rgba(0,158, 255,0.75);
+    }to{
+        box-shadow: none;
+    }    
+}
+
+#divHistorial{
+    flex-direction: column;
+    top: 25%;
+    left: 40%;
+    height: 100%;
+    width: 40%;
+    border-bottom-right-radius:4px;
+    border-top-right-radius:4px;
+    border-style: solid;
+    border-top: transparent;
+    border-bottom: transparent;
+    border-right: transparent;
+    font-size: medium;
+    overflow-y: auto;
+}
